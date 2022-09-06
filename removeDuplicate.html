@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let myArray1=['ayesha','2','ayesha','3','2']
+        console.log('original Array',myArray1)
+    function remove(mystr){
+        const unique=[];
+        mystr.forEach((value)=>{
+            if (!unique.includes(value)){
+                unique.push(value)
+            }
+        })
+        return unique;    
+        }
+       
+    
+    
+   console.log ('removed value by using forEach method',remove(myArray1))
+    // set method
+const myArray=[
+
+   
+    'fazila',
+    'eisha',
+    'humna',
+    'eisha'
+
+
+]
+console.log('original Array is',myArray)
+const unique1=[...new Set(myArray)]
+console.log('NewArray using set method',unique1)
+
+let myArray2=[
+    'shadab',
+    'riwzan',
+    '2',
+    '3',
+    '3',
+    'shadab',
+    '2'
+]
+console.log('Original Array ',myArray2)
+const newArray2= myArray2.filter((value,index)=>{
+    return myArray2.indexOf(value)===index;
+})
+console.log('New array by using filter method is',newArray2)
+
+let myArray3=[
+     'apple',
+    'orange',
+    'banana',
+    'apple',
+    'banana',
+    'strawberry'
+]
+
+var arr = ["apple", "mango",
+        "apple", "orange", "mango", "mango"];
+ 
+    function removeDuplicates(arr) {
+        var unique = arr.reduce(function (acc, curr) {
+            if (!acc.includes(curr))
+                acc.push(curr);
+            return acc;
+        }, []);
+        return unique;
+    }
+ 
+    console.log('New Array using reduce method is',removeDuplicates(arr));
+
+    </script>
+</body>
+</html>
